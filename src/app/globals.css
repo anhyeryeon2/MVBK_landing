@@ -1,42 +1,175 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Pretendard 폰트 적용 */
+@layer base {
+  html {
+    font-family: var(--font-pretendard), sans-serif;
+    background-color: #000; /* 배경색 이동 */
+  }
+
+  body {
+    @apply w-full min-h-screen bg-gray-black text-gray-white;
+  }
+
+  section {
+    @apply h-screen;
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+/* 커스텀 유틸리티 */
+@layer utilities {
+  .font-pretendard {
+    font-family: var(--font-pretendard), sans-serif;
+  }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* PC에서 중앙 정렬된 모바일 너비 유지 */
+@media (min-width: 768px) {
+  .react-fullpage-container {
+    max-width: 430px !important;
+    margin: 0 auto !important;
+  }
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+@theme {
+  --color-red-100: #ffdde5;
+  --color-red-200: #ffc4d2;
+  --color-red-300: #ff92ad;
+  --color-red-400: #ff5d7e;
+  --color-red-main: #ff1f44;
+  --color-red-600: #e6103e;
+  --color-red-700: #be1e31;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+  --color-gray-white: #fafafa;
+  --color-gray-100: #ececee;
+  --color-gray-200: #dddee0;
+  --color-gray-300: #a6a7ab;
+  --color-gray-400: #95969b;
+  --color-gray-500: #7a7d82;
+  --color-gray-600: #6f7176;
+  --color-gray-700: #57585c;
+  --color-gray-800: #434448;
+  --color-gray-850: #333537;
+  --color-gray-900: #29292c;
+  --color-gray-950: #1b1b1b;
+  --color-gray-black: #0e0e0e;
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+  --fs-title-1: 1.5rem;
+  --fs-title-2: 1.375rem;
+  --fs-title-3: 1.25rem;
+  --fs-body-1: 1.125rem;
+  --fs-body-2: 1rem;
+  --fs-body-3: 0.875rem;
+  --fs-caption-1: 0.75rem;
+  --fs-caption-2: 0.6875rem;
+  --fs-caption-3: 0.625rem;
+}
+@layer components {
+  .container-padding {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .title-1-bold {
+    font-size: var(--fs-title-1);
+    font-weight: 700;
+    line-height: 150%;
+  }
+  .title-1-semibold {
+    font-size: var(--fs-title-1);
+    font-weight: 600;
+    line-height: 150%;
+  }
+
+  .title-2-bold {
+    font-size: var(--fs-title-2);
+    font-weight: 700;
+    line-height: 150%;
+  }
+  .title-2-semibold {
+    font-size: var(--fs-title-2);
+    font-weight: 600;
+    line-height: 150%;
+  }
+
+  .title-3-bold {
+    font-size: var(--fs-title-3);
+    font-weight: 700;
+    line-height: 140%;
+  }
+  .title-3-semibold {
+    font-size: var(--fs-title-3);
+    font-weight: 600;
+    line-height: 140%;
+  }
+
+  .body-1-semibold {
+    font-size: var(--fs-body-1);
+    font-weight: 600;
+    line-height: 140%;
+  }
+  .body-1-medium {
+    font-size: var(--fs-body-1);
+    font-weight: 500;
+    line-height: 140%;
+  }
+
+  .body-2-semibold {
+    font-size: var(--fs-body-2);
+    font-weight: 600;
+    line-height: 140%;
+  }
+  .body-2-medium {
+    font-size: var(--fs-body-2);
+    font-weight: 500;
+    line-height: 140%;
+  }
+
+  .body-3-semibold {
+    font-size: var(--fs-body-3);
+    font-weight: 600;
+    line-height: 140%;
+  }
+  .body-3-medium {
+    font-size: var(--fs-body-3);
+    font-weight: 500;
+    line-height: 140%;
+  }
+  .body-3-regular {
+    font-size: var(--fs-body-3);
+    font-weight: 400;
+    line-height: 140%;
+  }
+  .caption-1-medium {
+    font-size: var(--fs-caption-1);
+    font-weight: 500;
+    line-height: 130%;
+  }
+  .caption-1-regular {
+    font-size: var(--fs-caption-1);
+    font-weight: 400;
+    line-height: 130%;
+  }
+
+  .caption-2-medium {
+    font-size: var(--fs-caption-2);
+    font-weight: 500;
+    line-height: 130%;
+  }
+  .caption-2-regular {
+    font-size: var(--fs-caption-2);
+    font-weight: 400;
+    line-height: 130%;
+  }
+  .caption-3-medium {
+    font-size: var(--fs-caption-3);
+    font-weight: 500;
+    line-height: 130%;
+  }
+  .caption-3-regular {
+    font-size: var(--fs-caption-3);
+    font-weight: 400;
+    line-height: 130%;
   }
 }
