@@ -5,7 +5,6 @@ import Image from "next/image";
 export default function Section1() {
   return (
     <div className="w-full h-screen bg-gray-black flex flex-col items-center justify-center text-center text-white px-6">
-      {/* 중앙 정렬된 콘텐츠 */}
       <Image
         src="/moviebookie.png"
         alt="mvbk logo"

@@ -64,7 +64,7 @@
   --fs-body-3: 0.875rem;
   --fs-caption-1: 0.75rem;
   --fs-caption-2: 0.6875rem;
-  --fs-caption-3: 0.625rem;
+  --fs-caption-3: 0.625rem; 
 }
 @layer components {
   .container-padding {

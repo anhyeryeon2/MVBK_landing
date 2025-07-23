@@ -8,12 +8,12 @@ export default function Header() {
       <Image
         src="/mvbk-logo.png"
         alt="mvbk logo"
-        width={100}
+        width={110}
         height={24}
-        className="h-[20px] w-auto"
+        className="h-[24px] w-auto"
         priority
       />
-      <button className="px-3 py-[6px] rounded-full bg-[#3d3d3d] text-white text-[14px] font-medium leading-[140%]">
+      <button className="px-[9px] py-[5px] rounded-[6px] bg-gray-850 text-white text-[14px] font-medium leading-[140%]">
         Beta 신청
       </button>
     </header>
