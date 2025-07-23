@@ -14,12 +14,14 @@ import Section4 from "./components/section/section4";
 import Section5 from "./components/section/section5";
 import Section6 from "./components/section/section6";
 import Section7 from "./components/section/section7";
+import Header from "./components/Header";
 
 export default function ReactFullpageDemo() {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <div className="w-full bg-gray-200 text-white">
+    <div className="w-full max-w-[430px] mx-auto bg-gray-black text-white relative">
+      <Header />
       <FullpageContainer
         activeIndex={activeIndex}
         setActiveIndex={setActiveIndex}

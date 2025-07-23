@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center px-[20px] py-[15px]">
+    <header className="absolute top-0 left-0 right-0 z-50 flex justify-between items-center px-[20px] py-[15px] bg-transparent">
       <Image
         src="/mvbk-logo.png"
         alt="mvbk logo"
