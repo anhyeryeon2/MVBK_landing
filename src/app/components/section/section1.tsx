@@ -2,16 +2,22 @@
 
 import Image from "next/image";
 import ArrowRight from "../../icons/arrow_right.svg";
+import { EXTERNAL_LINKS } from "@/constants/links";
 
 export default function Section1() {
   return (
-    <div className="w-full h-screen bg-landing-bg bg-no-repeat bg-bottom bg-black flex flex-col items-center justify-center text-center text-white px-6">
+    <div className="w-full h-screen bg-black flex flex-col items-center justify-center text-center text-white px-6 relative">
+      <div
+        className="absolute inset-0 bg-landing-bg bg-no-repeat bg-bottom opacity-70"
+        style={{ zIndex: 0 }}
+      />
+
       <Image
         src="/moviebookie.png"
         alt="mvbk logo"
         width={200}
         height={90}
-        className="w-[200px] h-auto animate-hero-logo"
+        className="w-[200px] h-auto animate-hero-logo relative z-10"
         priority
       />
       <p className="mt-4 text-sm leading-relaxed text-white/90 animate-hero-text">
@@ -21,7 +27,10 @@ export default function Section1() {
       </p>
 
       <div className="mt-[100px] px-6 animate-hero-button">
-        <button className="flex items-center justify-center gap-1 bg-red-main body-3-semibold w-[189px] h-[52px] rounded-xl pl-2 py-3 text-white active:bg-red-700 hover:bg-red-600 transition-all duration-200 hover:scale-105">
+        <button
+          onClick={() => window.open(EXTERNAL_LINKS.BETA_FORM, "_blank")}
+          className="flex items-center justify-center gap-1 bg-red-main body-3-semibold w-[189px] h-[52px] rounded-xl pl-2 py-3 text-white active:bg-red-700 hover:bg-red-600 transition-all duration-200 hover:scale-105"
+        >
           Beta 신청하러 가기
           <ArrowRight className="w-5 h-5 pt-[3px]" />
         </button>

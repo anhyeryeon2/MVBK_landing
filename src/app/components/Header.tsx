@@ -1,5 +1,6 @@
 "use client";
 
+import { EXTERNAL_LINKS } from "@/constants/links";
 import Image from "next/image";
 
 export default function Header() {
@@ -14,12 +15,7 @@ export default function Header() {
         priority
       />
       <button
-        onClick={() =>
-          window.open(
-            "https://forms.google.com/d/e/YOUR_FORM_ID/viewform",
-            "_blank"
-          )
-        }
+        onClick={() => window.open(EXTERNAL_LINKS.BETA_FORM, "_blank")}
         className="px-[9px] py-[5px] rounded-[6px] bg-gray-850 text-white text-[14px] font-medium leading-[140%]"
       >
         Beta 신청

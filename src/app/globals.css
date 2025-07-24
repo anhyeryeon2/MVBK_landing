@@ -188,3 +188,18 @@
     animation-delay: 1.8s;
   }
 }
+.bg-landing-bg-50 {
+  background-image: url("/background-mvbk.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  opacity: 0.5;
+}
+
+.bg-landing-bg-30 {
+  background-image: url("/background-mvbk.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  opacity: 0.3;
+}

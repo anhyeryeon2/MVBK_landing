@@ -1,12 +1,20 @@
 "use client";
 import { motion } from "framer-motion";
 import ArrowRight from "../../icons/arrow_right.svg";
+import { EXTERNAL_LINKS } from "@/constants/links";
 
 export default function Section2() {
   return (
-    <div className="w-full h-screen bg-landing-bg bg-no-repeat bg-bottom bg-black flex flex-col items-center justify-center text-center text-white px-6">
+    <div className="w-full h-screen bg-black flex flex-col items-center justify-center text-center text-white px-6 relative">
+      <div
+        className="absolute inset-0 bg-landing-bg bg-no-repeat bg-bottom opacity-50"
+        style={{ zIndex: 0 }}
+      />
+
+      {/* 콘텐츠 레이어 (투명도 적용 안됨) */}
       <motion.div
-        className="flex-1 flex flex-col justify-center items-center px-6 text-center text-white"
+        className="flex-1 flex flex-col justify-center items-center px-6 text-center text-white relative"
+        style={{ zIndex: 1 }}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
@@ -59,11 +67,14 @@ export default function Section2() {
           transition={{
             delay: 0.8,
             duration: 1,
-            ease: [0.34, 1.56, 0.64, 1], // 동일한 이징
+            ease: [0.34, 1.56, 0.64, 1],
           }}
           viewport={{ once: true }}
         >
-          <button className="flex items-center justify-center gap-1 bg-red-main body-3-semibold w-[189px] h-[52px] rounded-xl pl-2 py-3 text-white active:bg-red-700 hover:bg-red-600 transition-all duration-200 hover:scale-105">
+          <button
+            onClick={() => window.open(EXTERNAL_LINKS.BETA_FORM, "_blank")}
+            className="flex items-center justify-center gap-1 bg-red-main body-3-semibold w-[189px] h-[52px] rounded-xl pl-2 py-3 text-white active:bg-red-700 hover:bg-red-600 transition-all duration-200 hover:scale-105"
+          >
             Beta 신청하러 가기
             <ArrowRight className="w-5 h-5 pt-[3px]" />
           </button>

@@ -1,26 +1,63 @@
+"use client";
 import Image from "next/image";
 import SectionWrapper from "../SectionWrapper";
 import InstagramIcon from "../../icons/instagram.svg";
 import ArrowRight from "../../icons/arrow_right.svg";
+import { EXTERNAL_LINKS } from "@/constants/links";
+import FadeUp from "../FadeUp";
 
 export default function Section7() {
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: "무비부키",
+          text: "무비부키에서 나만의 영화관을 만들어보세요!",
+          url: "https://movie-bookie.shop",
+        });
+        console.log("✅ 공유 완료");
+      } catch (error) {
+        console.error("❌ 공유 실패:", error);
+      }
+    } else {
+      alert("이 브라우저는 공유 기능을 지원하지 않습니다.");
+    }
+  };
+
   return (
     <SectionWrapper className="w-full max-w-[430px] mx-auto bg-gray-black text-black relative">
       <div className="min-h-[calc(100vh-200px)] flex flex-col items-center justify-center gap-[18px] px-6">
-        <button className="flex items-center justify-center gap-1 bg-red-main body-3-semibold w-[250px] h-[52px] rounded-xl pl-6 py-3 text-white active:bg-red-700">
-          Beta 신청하러 가기
-          <ArrowRight className="w-5 h-5 pt-[3px]" />
-        </button>
-        <button className="flex items-center justify-center gap-1 bg-gray-900 body-3-semibold w-[250px] h-[52px] rounded-xl px-6 py-3 text-white active:bg-gray-950">
-          <InstagramIcon className="w-6 h-6" />
-          인스타그램 바로가기
-        </button>
-        <button className="bg-gray-900 body-3-semibold w-[250px] h-[52px] rounded-xl px-6 py-3 text-white active:bg-gray-950">
-          링크 공유하기
-        </button>
+        <FadeUp delay={0.1}>
+          <button
+            onClick={() => window.open(EXTERNAL_LINKS.BETA_FORM, "_blank")}
+            className="flex items-center justify-center gap-1 bg-red-main body-3-semibold w-[250px] h-[52px] rounded-xl pl-6 py-3 text-white active:bg-red-700"
+          >
+            Beta 신청하러 가기
+            <ArrowRight className="w-5 h-5 pt-[3px]" />
+          </button>
+        </FadeUp>
+
+        <FadeUp delay={0.3}>
+          <button
+            onClick={() => window.open(EXTERNAL_LINKS.INSTAGRAM, "_blank")}
+            className="flex items-center justify-center gap-1 bg-gray-900 body-3-semibold w-[250px] h-[52px] rounded-xl px-6 py-3 text-white active:bg-gray-950"
+          >
+            <InstagramIcon className="w-6 h-6" />
+            인스타그램 바로가기
+          </button>
+        </FadeUp>
+
+        <FadeUp delay={0.5}>
+          <button
+            onClick={handleShare}
+            className="bg-gray-900 body-3-semibold w-[250px] h-[52px] rounded-xl px-6 py-3 text-white active:bg-gray-950"
+          >
+            링크 공유하기
+          </button>
+        </FadeUp>
       </div>
 
-      <footer className="absolute bottom-0 left-0 w-full bg-gray-950 text-white px-6 pt-8 pb-[calc(env(safe-area-inset-bottom)+32px)] space-y-4">
+      <footer className="absolute bottom-0 left-0 w-full bg-gray-950 text-white px-6 pt-8 pb-footer space-y-4">
         <Image
           src="/mvbk-logo.png"
           alt="mvbk logo"
@@ -39,9 +76,19 @@ export default function Section7() {
       </footer>
 
       <style jsx>{`
+        .pb-footer {
+          padding-bottom: max(env(safe-area-inset-bottom), 16px);
+        }
+
         @supports (-webkit-touch-callout: none) {
-          footer {
-            padding-bottom: calc(env(safe-area-inset-bottom) + 64px) !important;
+          .pb-footer {
+            padding-bottom: max(env(safe-area-inset-bottom) + 40px, 56px);
+          }
+        }
+
+        @media (min-width: 768px) {
+          .pb-footer {
+            padding-bottom: 24px !important;
           }
         }
       `}</style>
