@@ -8,15 +8,16 @@ export function useIsSafari() {
   useEffect(() => {
     const ua = navigator.userAgent.toLowerCase();
 
-    const isSafari =
-      /safari/.test(ua) &&
-      !/crios|chrome|fxios|instagram|kakaotalk|naver|daum|line|discord|electron|wv|version\/[\d.]+.*chrome/.test(
-        ua
-      );
+    const isiOS = /iphone|ipad|ipod/i.test(ua);
+    const isSafariEngine = /safari/.test(ua) && !/crios|fxios|chrome/.test(ua);
 
-    const isNotInApp = window.top === window.self;
+    const isStandalone =
+      "standalone" in window.navigator && (window.navigator as any).standalone;
+    const isNotInApp = window.top === window.self || isStandalone;
 
-    setIsSafari(isSafari && isNotInApp);
+    const trulySafari = isiOS && isSafariEngine && isNotInApp;
+
+    setIsSafari(trulySafari);
   }, []);
 
   return isSafari;
