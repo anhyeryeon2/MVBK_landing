@@ -1,23 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import SectionWrapper from "../SectionWrapper";
 import InstagramIcon from "../../icons/instagram.svg";
 import ArrowRight from "../../icons/arrow_right.svg";
 import { EXTERNAL_LINKS } from "@/constants/links";
 import PopUp from "../PopUp";
+import { useIsSafari } from "@/app/hooks/useInSafari";
 
 export default function Section7() {
-  const [isSafari, setIsSafari] = useState(false);
-
-  useEffect(() => {
-    const ua = navigator.userAgent;
-    const isSafariBrowser =
-      /safari/i.test(ua) &&
-      !/chrome|crios|fxios|instagram|kakaotalk|naver|daum|line/i.test(ua);
-    setIsSafari(isSafariBrowser);
-  }, []);
+  const isSafari = useIsSafari();
 
   const handleShare = async () => {
     if (navigator.share) {
