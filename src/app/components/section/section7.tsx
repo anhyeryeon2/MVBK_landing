@@ -72,21 +72,20 @@ export default function Section7() {
           © 2025 MOVIEBOOKIE. ALL RIGHTS RESERVED
         </p>
       </footer>
-
       <style jsx>{`
         .pb-footer {
-          padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 16px);
+          padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 48px);
         }
 
         @supports (-webkit-touch-callout: none) {
           .pb-footer {
-            padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 40px);
+            padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 72px);
           }
         }
 
         @media (min-width: 768px) {
           .pb-footer {
-            padding-bottom: 24px !important;
+            padding-bottom: 32px !important;
           }
         }
       `}</style>

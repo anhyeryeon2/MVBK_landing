@@ -16,9 +16,9 @@ export default function Section1() {
   }, []);
 
   return (
-    <div className="w-full h-screen bg-black flex flex-col items-center justify-center text-center text-white px-6 relative overflow-hidden">
+    <div className="w-full h-screen bg-black flex flex-col items-center justify-center text-center text-white px-6 relative">
       <div
-        className="absolute inset-0 bg-landing-bg bg-no-repeat bg-bottom bg-cover bg-opacity-70"
+        className="absolute inset-0 bg-landing-bg bg-no-repeat bg-bottom opacity-70"
         style={{ zIndex: 0 }}
       />
       {/* 맨 위 fade-in 레이어 (노치 색상과 자연스럽게 연결) */}
