@@ -11,12 +11,7 @@ export default function Section7() {
     if (navigator.share) {
       try {
         await navigator.share({
-          text:
-            "🎬 나만의 영화관, 지금 바로 예약해보세요!\n\n" +
-            "무비부키에서는 장소, 시간만 정하면\n" +
-            "영화관 대관부터 모집까지 한 번에 해결돼요.\n\n" +
-            "📍 지금 시작하기\n" +
-            "👉 https://movie-bookie.shop",
+          text: " https://movie-bookie.shop",
         });
         console.log("공유 완료");
       } catch (error) {
@@ -80,12 +75,12 @@ export default function Section7() {
 
       <style jsx>{`
         .pb-footer {
-          padding-bottom: max(env(safe-area-inset-bottom), 16px);
+          padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 16px);
         }
 
         @supports (-webkit-touch-callout: none) {
           .pb-footer {
-            padding-bottom: max(env(safe-area-inset-bottom) + 40px, 56px);
+            padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 40px);
           }
         }
 

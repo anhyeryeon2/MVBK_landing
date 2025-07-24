@@ -21,6 +21,8 @@ export default function Section1() {
         className="absolute inset-0 bg-landing-bg bg-no-repeat bg-bottom bg-cover bg-opacity-70"
         style={{ zIndex: 0 }}
       />
+      {/* 맨 위 fade-in 레이어 (노치 색상과 자연스럽게 연결) */}
+      <div className="absolute top-0 left-0 w-full h-20 z-10 pointer-events-none bg-gradient-to-b from-gray-black to-transparent" />
 
       <motion.img
         src="/moviebookie.png"
@@ -78,6 +80,7 @@ export default function Section1() {
           <ArrowRight className="w-5 h-5 pt-[3px]" />
         </button>
       </motion.div>
+      <div className="absolute bottom-0 left-0 w-full h-20 z-10 pointer-events-none bg-gradient-to-b from-transparent to-black/100" />
     </div>
   );
 }
