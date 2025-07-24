@@ -6,15 +6,17 @@ export function useIsSafari() {
   const [isSafari, setIsSafari] = useState(false);
 
   useEffect(() => {
-    const ua = navigator.userAgent;
+    const ua = navigator.userAgent.toLowerCase();
 
-    const isSafariBrowser =
-      /safari/i.test(ua) &&
-      !/chrome|crios|fxios|instagram|kakaotalk|naver|daum|line|discord/i.test(
+    const isSafari =
+      /safari/.test(ua) &&
+      !/crios|chrome|fxios|instagram|kakaotalk|naver|daum|line|discord|electron|wv|version\/[\d.]+.*chrome/.test(
         ua
       );
 
-    setIsSafari(isSafariBrowser);
+    const isNotInApp = window.top === window.self;
+
+    setIsSafari(isSafari && isNotInApp);
   }, []);
 
   return isSafari;
