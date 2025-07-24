@@ -10,9 +10,9 @@ export function useIsSafari() {
 
     const isiOS = /iphone|ipad|ipod/i.test(ua);
     const isSafariEngine = /safari/.test(ua) && !/crios|fxios|chrome/.test(ua);
-
     const isStandalone =
-      "standalone" in window.navigator && (window.navigator as any).standalone;
+      "standalone" in navigator && (navigator as any).standalone; // eslint-disable-line @typescript-eslint/no-explicit-any
+
     const isNotInApp = window.top === window.self || isStandalone;
 
     const trulySafari = isiOS && isSafariEngine && isNotInApp;
