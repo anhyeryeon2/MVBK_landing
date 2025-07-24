@@ -21,7 +21,6 @@ export default function InAppRedirect() {
     }
 
     if (ua.includes("discord")) {
-      // Discord 앱에서는 새 탭으로 열기 시도
       const opened = window.open(currentUrl, "_blank");
 
       // 새 탭이 차단된 경우 사용자에게 안내

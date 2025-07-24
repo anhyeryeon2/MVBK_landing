@@ -60,11 +60,12 @@ export default function Section7() {
       </div>
 
       <footer
-        className={`absolute bottom-0 left-0 w-full bg-gray-950 text-white px-6 pt-8 space-y-4 ${
-          isSafari
-            ? "pb-[calc(env(safe-area-inset-bottom,16px)_+_110px)]"
-            : "pb-[26px]"
-        }`}
+        className="absolute bottom-0 left-0 w-full bg-gray-950 text-white px-6 pt-8 space-y-4"
+        style={{
+          paddingBottom: isSafari
+            ? `calc(max(26px, env(safe-area-inset-bottom, 0px)) + 110px)`
+            : "26px",
+        }}
       >
         <Image
           src="/mvbk-logo.png"
