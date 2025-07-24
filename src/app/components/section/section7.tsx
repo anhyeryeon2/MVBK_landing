@@ -74,18 +74,18 @@ export default function Section7() {
       </footer>
       <style jsx>{`
         .pb-footer {
-          padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 100px);
+          padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 90px);
         }
 
         @supports (-webkit-touch-callout: none) {
           .pb-footer {
-            padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 120px);
+            padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 110px);
           }
         }
 
         @media (min-width: 768px) {
           .pb-footer {
-            padding-bottom: 32px !important;
+            padding-bottom: 28px !important;
           }
         }
       `}</style>
