@@ -1,12 +1,24 @@
-import type { Metadata } from "next";
 import { pretendard } from "../app/fonts/pretendard";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: "MVBK",
-  description: "MOVIEBOOKIE",
+export const metadata = {
+  title: "무비부키 | 영화관 모임의 시작",
+  description: "지금 바로 영화관에서 당신만의 추억을 예약해보세요.",
+  openGraph: {
+    title: "무비부키 | 영화관 모임의 시작",
+    description: "지금 바로 영화관에서 당신만의 추억을 예약해보세요.",
+    url: "https://movie-bookie.shop",
+    images: [
+      {
+        url: "https://movie-bookie.shop/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "MovieBookie",
+      },
+    ],
+    type: "website",
+  },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -19,8 +31,6 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
         />
-        {/* <link rel="manifest" href="/manifest.json" /> */}
-        {/* <link rel="icon" href="/images/favicon/48x48.png" /> */}
       </head>
       <body>{children}</body>
     </html>

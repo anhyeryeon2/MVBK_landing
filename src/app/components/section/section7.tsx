@@ -19,7 +19,7 @@ export default function Section7() {
         </button>
       </div>
 
-      <footer className="absolute bottom-0 left-0 w-full bg-gray-950 text-white px-6 pt-8 pb-[calc(env(safe-area-inset-bottom)+32px)] space-y-4">
+      <footer className="absolute bottom-0 left-0 w-full bg-gray-950 text-white px-6 pt-8 pb-[calc(env(safe-area-inset-bottom)+64px)] space-y-4">
         <Image
           src="/mvbk-logo.png"
           alt="mvbk logo"
