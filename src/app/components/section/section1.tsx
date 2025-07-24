@@ -16,13 +16,8 @@ export default function Section1() {
   }, []);
 
   return (
-    <div className="w-full h-screen bg-black flex flex-col items-center justify-center text-center text-white px-6 relative">
-      <div
-        className="absolute inset-0 bg-landing-bg bg-no-repeat bg-bottom opacity-70"
-        style={{ zIndex: 0 }}
-      />
+    <div className="w-full h-screen flex flex-col items-center justify-center text-center text-white px-6 relative">
       <div className="absolute top-0 left-0 w-full h-20 z-10 pointer-events-none bg-gradient-to-b from-gray-black to-transparent" />
-
       <motion.img
         src="/moviebookie.png"
         alt="mvbk logo"
@@ -78,7 +73,6 @@ export default function Section1() {
           <ArrowRight className="w-5 h-5 pt-[3px]" />
         </button>
       </motion.div>
-      <div className="absolute bottom-0 left-0 w-full h-20 z-10 pointer-events-none bg-gradient-to-b from-transparent to-black/100" />
     </div>
   );
 }

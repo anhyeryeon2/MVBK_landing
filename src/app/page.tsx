@@ -20,8 +20,9 @@ export default function ReactFullpageDemo() {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <div className="relative bg-gray-black text-white w-full h-screen">
-      <div className="absolute left-1/2 -translate-x-1/2 w-full max-w-[430px]">
+    <div className="relative bg-gray-black text-white w-full h-screen overflow-hidden">
+      <div className="fixed inset-0 z-0 bg-landing-bg bg-no-repeat bg-cover bg-bottom opacity-60" />
+      <div className="relative z-10 left-1/2 -translate-x-1/2 w-full max-w-[430px]">
         <Header />
         <FullpageContainer
           activeIndex={activeIndex}
@@ -34,19 +35,29 @@ export default function ReactFullpageDemo() {
             <Section2 />
           </FullpageSection>
           <FullpageSection name="third">
-            <Section3 />
+            <div className="bg-gray-black">
+              <Section3 />
+            </div>
           </FullpageSection>
           <FullpageSection name="fourth">
-            <Section4 />
+            <div className="bg-gray-black">
+              <Section4 />
+            </div>
           </FullpageSection>
           <FullpageSection name="fifth">
-            <Section5 />
+            <div className="bg-gray-black">
+              <Section5 />
+            </div>
           </FullpageSection>
           <FullpageSection name="sixth">
-            <Section6 />
+            <div className="bg-gray-black">
+              <Section6 />
+            </div>
           </FullpageSection>
           <FullpageSection name="seventh">
-            <Section7 />
+            <div className="bg-gray-black">
+              <Section7 />
+            </div>
           </FullpageSection>
         </FullpageContainer>
       </div>

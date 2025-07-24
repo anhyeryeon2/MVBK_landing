@@ -5,13 +5,9 @@ import { EXTERNAL_LINKS } from "@/constants/links";
 
 export default function Section2() {
   return (
-    <div className="w-full h-screen bg-black flex flex-col items-center justify-center text-center text-white px-6 relative">
-      <div
-        className="absolute inset-0 bg-landing-bg bg-no-repeat bg-bottom opacity-50"
-        style={{ zIndex: 0 }}
-      />
-      {/* 맨 위 fade-in 레이어 (노치 색상과 자연스럽게 연결) */}
-      <div className="absolute top-0 left-0 w-full h-20 z-10 pointer-events-none bg-gradient-to-b from-gray-black to-transparent" />
+    <div className="w-full h-screen flex flex-col items-center justify-center text-center text-white px-6 relative">
+      {/* 삭제: 배경 레이어 */}
+      {/* <div className="absolute inset-0 bg-landing-bg ... /> */}
 
       <motion.div
         className="flex-1 flex flex-col justify-center items-center px-6 text-center text-white relative"
@@ -81,7 +77,7 @@ export default function Section2() {
           </button>
         </motion.div>
       </motion.div>
-      <div className="absolute bottom-0 left-0 w-full h-20 z-10 pointer-events-none bg-gradient-to-b from-transparent to-black/100" />
+      <div className="absolute bottom-0 left-0 w-full h-20 z-10 pointer-events-none bg-gradient-to-b from-transparent to-gray-black" />
     </div>
   );
 }
