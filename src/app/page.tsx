@@ -49,7 +49,7 @@ export default function ReactFullpageDemo() {
             <Section7 />
           </FullpageSection>
         </FullpageContainer>
-      </div>{" "}
+      </div>
     </div>
   );
 }

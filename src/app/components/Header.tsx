@@ -16,7 +16,7 @@ export default function Header() {
       />
       <button
         onClick={() => window.open(EXTERNAL_LINKS.BETA_FORM, "_blank")}
-        className="px-[9px] py-[5px] rounded-[6px] bg-gray-850 text-white text-[14px] font-medium leading-[140%]"
+        className="px-[9px] py-[5px] rounded-[6px] bg-gray-850 text-white text-[14px] font-medium leading-[140%] active:bg-gray-900"
       >
         Beta 신청
       </button>

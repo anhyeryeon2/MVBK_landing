@@ -74,7 +74,7 @@ export default function Section2() {
         >
           <button
             onClick={() => window.open(EXTERNAL_LINKS.BETA_FORM, "_blank")}
-            className="flex items-center justify-center gap-1 bg-red-main body-3-semibold w-[189px] h-[52px] rounded-xl pl-2 py-3 text-white active:bg-red-700 hover:bg-red-600 transition-all duration-200 hover:scale-105"
+            className="flex items-center justify-center gap-1 bg-red-main body-3-semibold w-[189px] h-[52px] rounded-xl pl-2 py-3 text-white active:bg-red-700  transition-all duration-200"
           >
             Beta 신청하러 가기
             <ArrowRight className="w-5 h-5 pt-[3px]" />
