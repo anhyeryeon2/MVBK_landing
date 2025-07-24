@@ -74,7 +74,7 @@ export default function Section7() {
       </footer>
       <style jsx>{`
         .pb-footer {
-          padding-bottom: 160px;
+          padding-bottom: 26px;
         }
 
         @supports (-webkit-touch-callout: none) {
