@@ -74,12 +74,12 @@ export default function Section7() {
       </footer>
       <style jsx>{`
         .pb-footer {
-          padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 48px);
+          padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 100px);
         }
 
         @supports (-webkit-touch-callout: none) {
           .pb-footer {
-            padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 72px);
+            padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 120px);
           }
         }
 

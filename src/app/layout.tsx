@@ -1,4 +1,5 @@
 import { pretendard } from "../app/fonts/pretendard";
+import InAppRedirect from "./components/InAppRedirect";
 import "./globals.css";
 
 export const metadata = {
@@ -32,7 +33,11 @@ export default function RootLayout({
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {" "}
+        <InAppRedirect />
+        {children}
+      </body>
     </html>
   );
 }
