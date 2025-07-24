@@ -2,11 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Pretendard 폰트 적용 */
 @layer base {
   html {
     font-family: var(--font-pretendard), sans-serif;
-    background-color: #000; /* 배경색 이동 */
+    background-color: #000;
   }
 
   body {
@@ -18,19 +17,22 @@
   }
 }
 
-/* 커스텀 유틸리티 */
 @layer utilities {
   .font-pretendard {
     font-family: var(--font-pretendard), sans-serif;
   }
 }
 
-/* PC에서 중앙 정렬된 모바일 너비 유지 */
 @media (min-width: 768px) {
   .react-fullpage-container {
     max-width: 430px !important;
     margin: 0 auto !important;
   }
+}
+
+html,
+body {
+  overflow: hidden;
 }
 
 @theme {
