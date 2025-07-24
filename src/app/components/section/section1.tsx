@@ -1,19 +1,27 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import ArrowRight from "../../icons/arrow_right.svg";
 import { EXTERNAL_LINKS } from "@/constants/links";
 
 export default function Section1() {
+  const [startAnimation, setStartAnimation] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setStartAnimation(true);
+    }, 300);
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
-    <div className="w-full h-screen bg-black flex flex-col items-center justify-center text-center text-white px-6 relative">
-      {/* 배경 이미지 (즉시 표시) */}
+    <div className="w-full h-screen bg-black flex flex-col items-center justify-center text-center text-white px-6 relative overflow-hidden">
       <div
-        className="absolute inset-0 bg-landing-bg bg-no-repeat bg-bottom opacity-70"
+        className="absolute inset-0 bg-landing-bg bg-no-repeat bg-bottom bg-cover bg-opacity-70"
         style={{ zIndex: 0 }}
       />
 
-      {/* 로고 */}
       <motion.img
         src="/moviebookie.png"
         alt="mvbk logo"
@@ -21,18 +29,21 @@ export default function Section1() {
         height={90}
         className="w-[200px] h-auto relative z-10"
         initial={{ opacity: 0, y: -30, scale: 0.8 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
+        animate={
+          startAnimation
+            ? { opacity: 1, y: 0, scale: 1 }
+            : { opacity: 0, y: -30, scale: 0.8 }
+        }
         transition={{
           duration: 0.8,
           ease: [0.34, 1.56, 0.64, 1],
         }}
       />
 
-      {/* 텍스트 */}
       <motion.p
-        className=" z-10 mt-4 text-sm leading-relaxed text-white/90"
+        className="z-10 mt-4 body-3-medium text-white/90"
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        animate={startAnimation ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{
           delay: 0.3,
           duration: 0.6,
@@ -48,7 +59,11 @@ export default function Section1() {
       <motion.div
         className="z-10 mt-[100px] px-6"
         initial={{ opacity: 0, y: 25, scale: 0.95 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
+        animate={
+          startAnimation
+            ? { opacity: 1, y: 0, scale: 1 }
+            : { opacity: 0, y: 25, scale: 0.95 }
+        }
         transition={{
           delay: 0.6,
           duration: 0.7,

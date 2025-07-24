@@ -4,14 +4,19 @@ import SectionWrapper from "../SectionWrapper";
 import InstagramIcon from "../../icons/instagram.svg";
 import ArrowRight from "../../icons/arrow_right.svg";
 import { EXTERNAL_LINKS } from "@/constants/links";
-import FadeUp from "../FadeUp";
+import PopUp from "../PopUp";
 
 export default function Section7() {
   const handleShare = async () => {
     if (navigator.share) {
       try {
         await navigator.share({
-          text: "무비부키에서 나만의 영화관을 만들어보세요!\nhttps://movie-bookie.shop",
+          text:
+            "🎬 나만의 영화관, 지금 바로 예약해보세요!\n\n" +
+            "무비부키에서는 장소, 시간만 정하면\n" +
+            "영화관 대관부터 모집까지 한 번에 해결돼요.\n\n" +
+            "📍 지금 시작하기\n" +
+            "👉 https://movie-bookie.shop",
         });
         console.log("공유 완료");
       } catch (error) {
@@ -25,7 +30,7 @@ export default function Section7() {
   return (
     <SectionWrapper className="w-full max-w-[430px] mx-auto bg-gray-black text-black relative">
       <div className="min-h-[calc(100vh-200px)] flex flex-col items-center justify-center gap-[18px] px-6">
-        <FadeUp delay={0.1}>
+        <PopUp delay={0.1}>
           <button
             onClick={() => window.open(EXTERNAL_LINKS.BETA_FORM, "_blank")}
             className="flex items-center justify-center gap-1 bg-red-main body-3-semibold w-[250px] h-[52px] rounded-xl pl-6 py-3 text-white active:bg-red-700"
@@ -33,9 +38,9 @@ export default function Section7() {
             Beta 신청하러 가기
             <ArrowRight className="w-5 h-5 pt-[3px]" />
           </button>
-        </FadeUp>
+        </PopUp>
 
-        <FadeUp delay={0.3}>
+        <PopUp delay={0.3}>
           <button
             onClick={() => window.open(EXTERNAL_LINKS.INSTAGRAM, "_blank")}
             className="flex items-center justify-center gap-1 bg-gray-900 body-3-semibold w-[250px] h-[52px] rounded-xl px-6 py-3 text-white active:bg-gray-950"
@@ -43,16 +48,16 @@ export default function Section7() {
             <InstagramIcon className="w-6 h-6" />
             인스타그램 바로가기
           </button>
-        </FadeUp>
+        </PopUp>
 
-        <FadeUp delay={0.5}>
+        <PopUp delay={0.5}>
           <button
             onClick={handleShare}
             className="bg-gray-900 body-3-semibold w-[250px] h-[52px] rounded-xl px-6 py-3 text-white active:bg-gray-950"
           >
             링크 공유하기
           </button>
-        </FadeUp>
+        </PopUp>
       </div>
 
       <footer className="absolute bottom-0 left-0 w-full bg-gray-950 text-white px-6 pt-8 pb-footer space-y-4">
