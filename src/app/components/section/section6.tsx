@@ -1,6 +1,7 @@
 "use client";
 
 import Lottie from "lottie-react";
+import landing4 from "../../../../public/lottie/randing_4.json";
 
 export default function Section6() {
   return (
@@ -16,9 +17,7 @@ export default function Section6() {
           모든 과정을 실시간으로 전달 받아요.
         </p>
         <div className="mt-8 w-[280px] h-[280px] animate-float-up animation-delay-1000">
-          <Lottie
-            animationData={require("../../../../public/lottie/randing_4.json")}
-          />
+          <Lottie animationData={landing4} />
         </div>
       </div>
     </div>

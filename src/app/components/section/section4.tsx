@@ -1,5 +1,6 @@
 "use client";
 import Lottie from "lottie-react";
+import landing2 from "../../../../public/lottie/randing_2.json";
 
 export default function Section4() {
   return (
@@ -15,9 +16,7 @@ export default function Section4() {
           무비부키가 대관 신청을 대신 진행해드려요.
         </p>
         <div className="mt-8 w-[280px] h-[280px]">
-          <Lottie
-            animationData={require("../../../../public/lottie/randing_2.json")}
-          />
+          <Lottie animationData={landing2} />
         </div>
       </div>
     </div>

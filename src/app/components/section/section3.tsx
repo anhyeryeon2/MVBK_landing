@@ -1,5 +1,6 @@
 "use client";
 import Lottie from "lottie-react";
+import landing1 from "../../../../public/lottie/randing_1.json";
 
 export default function Section3() {
   return (
@@ -15,9 +16,7 @@ export default function Section3() {
           복잡한 절차 없이 함께할 사람을 모집할 수 있어요.
         </p>
         <div className="mt-8 w-[280px] h-[280px] animate-float-up animation-delay-1000">
-          <Lottie
-            animationData={require("../../../../public/lottie/randing_1.json")}
-          />
+          <Lottie animationData={landing1} />
         </div>
       </div>
 
