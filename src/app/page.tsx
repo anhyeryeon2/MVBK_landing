@@ -20,34 +20,36 @@ export default function ReactFullpageDemo() {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <div className="w-full max-w-[430px] mx-auto bg-gray-black text-white relative justify-center">
-      <Header />
-      <FullpageContainer
-        activeIndex={activeIndex}
-        setActiveIndex={setActiveIndex}
-      >
-        <FullpageSection name="first">
-          <Section1 />
-        </FullpageSection>
-        <FullpageSection name="second">
-          <Section2 />
-        </FullpageSection>
-        <FullpageSection name="third">
-          <Section3 />
-        </FullpageSection>
-        <FullpageSection name="fourth">
-          <Section4 />
-        </FullpageSection>
-        <FullpageSection name="fifth">
-          <Section5 />
-        </FullpageSection>
-        <FullpageSection name="sixth">
-          <Section6 />
-        </FullpageSection>
-        <FullpageSection name="seventh">
-          <Section7 />
-        </FullpageSection>
-      </FullpageContainer>
+    <div className="relative bg-gray-black text-white w-full h-screen">
+      <div className="absolute left-1/2 -translate-x-1/2 w-full max-w-[430px]">
+        <Header />
+        <FullpageContainer
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <FullpageSection name="first">
+            <Section1 />
+          </FullpageSection>
+          <FullpageSection name="second">
+            <Section2 />
+          </FullpageSection>
+          <FullpageSection name="third">
+            <Section3 />
+          </FullpageSection>
+          <FullpageSection name="fourth">
+            <Section4 />
+          </FullpageSection>
+          <FullpageSection name="fifth">
+            <Section5 />
+          </FullpageSection>
+          <FullpageSection name="sixth">
+            <Section6 />
+          </FullpageSection>
+          <FullpageSection name="seventh">
+            <Section7 />
+          </FullpageSection>
+        </FullpageContainer>
+      </div>{" "}
     </div>
   );
 }
