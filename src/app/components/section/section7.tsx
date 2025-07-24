@@ -1,4 +1,6 @@
 "use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import SectionWrapper from "../SectionWrapper";
 import InstagramIcon from "../../icons/instagram.svg";
@@ -7,6 +9,16 @@ import { EXTERNAL_LINKS } from "@/constants/links";
 import PopUp from "../PopUp";
 
 export default function Section7() {
+  const [isSafari, setIsSafari] = useState(false);
+
+  useEffect(() => {
+    const ua = navigator.userAgent;
+    const isSafariBrowser =
+      /safari/i.test(ua) &&
+      !/chrome|crios|fxios|instagram|kakaotalk|naver|daum|line/i.test(ua);
+    setIsSafari(isSafariBrowser);
+  }, []);
+
   const handleShare = async () => {
     if (navigator.share) {
       try {
@@ -55,7 +67,13 @@ export default function Section7() {
         </PopUp>
       </div>
 
-      <footer className="absolute bottom-0 left-0 w-full bg-gray-950 text-white px-6 pt-8 pb-footer space-y-4">
+      <footer
+        className={`absolute bottom-0 left-0 w-full bg-gray-950 text-white px-6 pt-8 space-y-4 ${
+          isSafari
+            ? "pb-[calc(env(safe-area-inset-bottom,16px)_+_110px)]"
+            : "pb-[26px]"
+        }`}
+      >
         <Image
           src="/mvbk-logo.png"
           alt="mvbk logo"
@@ -72,23 +90,6 @@ export default function Section7() {
           © 2025 MOVIEBOOKIE. ALL RIGHTS RESERVED
         </p>
       </footer>
-      <style jsx>{`
-        .pb-footer {
-          padding-bottom: 26px;
-        }
-
-        @supports (-webkit-touch-callout: none) {
-          .pb-footer {
-            padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 110px);
-          }
-        }
-
-        @media (min-width: 768px) {
-          .pb-footer {
-            padding-bottom: 28px !important;
-          }
-        }
-      `}</style>
     </SectionWrapper>
   );
 }
