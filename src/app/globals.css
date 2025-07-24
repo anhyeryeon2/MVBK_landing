@@ -30,11 +30,6 @@
   }
 }
 
-html,
-body {
-  overflow: hidden;
-}
-
 @theme {
   --color-red-100: #ffdde5;
   --color-red-200: #ffc4d2;

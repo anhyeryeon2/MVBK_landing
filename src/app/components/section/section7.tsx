@@ -63,7 +63,7 @@ export default function Section7() {
         className="absolute bottom-0 left-0 w-full bg-gray-950 text-white px-6 pt-8 space-y-4"
         style={{
           paddingBottom: isSafari
-            ? ` calc(env(safe-area-inset-bottom, 16px) + 110px)`
+            ? ` calc(env(safe-area-inset-bottom, 26px) + 110px)`
             : "26px",
         }}
       >
