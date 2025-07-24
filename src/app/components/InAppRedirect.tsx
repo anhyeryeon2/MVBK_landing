@@ -7,7 +7,7 @@ export default function InAppRedirect() {
     const ua = navigator.userAgent.toLowerCase();
     const currentUrl = window.location.href;
     const isInApp =
-      /kakaotalk|naver|line|instagram|daum|everytime|samsungbrowser\/[^1]/i.test(
+      /kakaotalk|naver|line|instagram|daum|everytime|discord|samsungbrowser\/[^1]/i.test(
         ua
       );
 
