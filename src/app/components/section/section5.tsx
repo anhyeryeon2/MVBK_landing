@@ -18,14 +18,14 @@ export default function Section5() {
         </FadeUp>
 
         <FadeUp
-          delay={0.6}
+          delay={0.4}
           className="mt-4 body-3-regular text-gray-300 pb-[56px]"
         >
           지금 진행되고 있는 다양한 대관 이벤트들을 <br />
           무비부키 에서 모두 살펴볼 수 있어요.
         </FadeUp>
 
-        <FadeUp delay={1} y={50} className="mt-8 w-[280px] h-[280px]">
+        <FadeUp delay={0.6} y={50} className="mt-8 w-[280px] h-[280px]">
           <Lottie animationData={landing3} />
         </FadeUp>
       </div>

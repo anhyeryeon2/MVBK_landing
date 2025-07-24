@@ -18,14 +18,14 @@ export default function Section4() {
         </FadeUp>
 
         <FadeUp
-          delay={0.6}
+          delay={0.4}
           className="mt-4 body-3-regular text-gray-300 pb-[56px]"
         >
           번거롭게 직접 영화관에 연락하지 않아도 돼요. <br />
           무비부키가 대관 신청을 대신 진행해드려요.
         </FadeUp>
 
-        <FadeUp delay={1} y={50} className="mt-8 w-[280px] h-[280px]">
+        <FadeUp delay={0.6} y={50} className="mt-8 w-[280px] h-[280px]">
           <Lottie animationData={landing2} />
         </FadeUp>
       </div>

@@ -17,14 +17,14 @@ export default function Section3() {
         </FadeUp>
 
         <FadeUp
-          delay={0.6}
+          delay={0.4}
           className="mt-4 body-3-regular text-gray-300 pb-[56px]"
         >
           시간, 날짜, 장소만 정하고 게시글을 올리면 준비 끝! <br />
           복잡한 절차 없이 함께할 사람을 모집할 수 있어요.
         </FadeUp>
 
-        <FadeUp delay={1} y={50} className="mt-8 w-[280px] h-[280px]">
+        <FadeUp delay={0.6} y={50} className="mt-8 w-[280px] h-[280px]">
           <Lottie animationData={landing1} />
         </FadeUp>
       </div>

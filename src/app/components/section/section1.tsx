@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import ArrowRight from "../../icons/arrow_right.svg";
 import { EXTERNAL_LINKS } from "@/constants/links";
+import { motion } from "framer-motion";
 
 export default function Section1() {
   return (
@@ -12,13 +12,18 @@ export default function Section1() {
         style={{ zIndex: 0 }}
       />
 
-      <Image
+      <motion.img
         src="/moviebookie.png"
         alt="mvbk logo"
         width={200}
         height={90}
-        className="w-[200px] h-auto animate-hero-logo relative z-10"
-        priority
+        className="w-[200px] h-auto relative z-10"
+        initial={{ opacity: 0, y: -30, scale: 0.8 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{
+          duration: 1.2,
+          ease: [0.34, 1.56, 0.64, 1],
+        }}
       />
       <p className="mt-4 text-sm leading-relaxed text-white/90 animate-hero-text">
         지금 바로 영화관에서
@@ -37,20 +42,6 @@ export default function Section1() {
       </div>
 
       <style jsx>{`
-        @keyframes hero-logo {
-          0% {
-            opacity: 0;
-            transform: translateY(-30px) scale(0.8);
-          }
-          60% {
-            transform: translateY(5px) scale(1.05);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-          }
-        }
-
         @keyframes hero-text {
           from {
             opacity: 0;

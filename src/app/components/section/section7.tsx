@@ -11,13 +11,11 @@ export default function Section7() {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: "무비부키",
-          text: "무비부키에서 나만의 영화관을 만들어보세요!",
-          url: "https://movie-bookie.shop",
+          text: "무비부키에서 나만의 영화관을 만들어보세요!\nhttps://movie-bookie.shop",
         });
-        console.log("✅ 공유 완료");
+        console.log("공유 완료");
       } catch (error) {
-        console.error("❌ 공유 실패:", error);
+        console.error("공유 실패:", error);
       }
     } else {
       alert("이 브라우저는 공유 기능을 지원하지 않습니다.");

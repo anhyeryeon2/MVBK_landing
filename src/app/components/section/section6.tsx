@@ -17,14 +17,14 @@ export default function Section6() {
         </FadeUp>
 
         <FadeUp
-          delay={0.6}
+          delay={0.4}
           className="mt-4 body-3-regular text-gray-300 pb-[56px]"
         >
           신청 완료, 모집 마감, 대관 확정까지 <br />
           모든 과정을 실시간으로 전달 받아요.
         </FadeUp>
 
-        <FadeUp delay={1} y={50} className="mt-8 w-[280px] h-[280px]">
+        <FadeUp delay={0.6} y={50} className="mt-8 w-[280px] h-[280px]">
           <Lottie animationData={landing4} />
         </FadeUp>
       </div>
