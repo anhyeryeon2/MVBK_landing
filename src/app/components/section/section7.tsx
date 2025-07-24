@@ -2,10 +2,11 @@ import Image from "next/image";
 import SectionWrapper from "../SectionWrapper";
 import InstagramIcon from "../../icons/instagram.svg";
 import ArrowRight from "../../icons/arrow_right.svg";
+
 export default function Section7() {
   return (
     <SectionWrapper className="w-full max-w-[430px] mx-auto bg-gray-black text-black relative">
-      <div className="min-h-[calc(100vh-160px)] flex flex-col items-center justify-center gap-[18px] px-6">
+      <div className="min-h-[calc(100vh-200px)] flex flex-col items-center justify-center gap-[18px] px-6">
         <button className="flex items-center justify-center gap-1 bg-red-main body-3-semibold w-[250px] h-[52px] rounded-xl pl-6 py-3 text-white active:bg-red-700">
           Beta 신청하러 가기
           <ArrowRight className="w-5 h-5 pt-[3px]" />
@@ -19,7 +20,7 @@ export default function Section7() {
         </button>
       </div>
 
-      <footer className="absolute bottom-0 left-0 w-full bg-gray-950 text-white px-6 pt-8 pb-[calc(env(safe-area-inset-bottom)+64px)] space-y-4">
+      <footer className="absolute bottom-0 left-0 w-full bg-gray-950 text-white px-6 pt-8 pb-[calc(env(safe-area-inset-bottom)+32px)] space-y-4">
         <Image
           src="/mvbk-logo.png"
           alt="mvbk logo"
@@ -36,6 +37,14 @@ export default function Section7() {
           © 2025 MOVIEBOOKIE. ALL RIGHTS RESERVED
         </p>
       </footer>
+
+      <style jsx>{`
+        @supports (-webkit-touch-callout: none) {
+          footer {
+            padding-bottom: calc(env(safe-area-inset-bottom) + 64px) !important;
+          }
+        }
+      `}</style>
     </SectionWrapper>
   );
 }

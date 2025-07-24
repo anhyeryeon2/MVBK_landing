@@ -10,7 +10,7 @@ export const metadata = {
     url: "https://movie-bookie.shop",
     images: [
       {
-        url: "https://movie-bookie.shop/og-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "MovieBookie",

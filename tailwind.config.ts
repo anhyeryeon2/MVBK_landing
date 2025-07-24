@@ -8,6 +8,24 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animationDelay: {
+        100: "0.3s",
+        300: "0.8s",
+        500: "1.3s",
+        700: "1.8s",
+      },
+      keyframes: {
+        "fade-up": {
+          from: { opacity: "0", transform: "translateY(30px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        "fade-up": "fade-up 0.8s ease-out forwards",
+      },
+      backgroundImage: {
+        "landing-bg": "url('/background-mvbk.png')",
+      },
       colors: {
         red: {
           100: "#ffdde5",

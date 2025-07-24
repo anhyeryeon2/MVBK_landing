@@ -13,7 +13,15 @@ export default function Header() {
         className="h-[24px] w-auto"
         priority
       />
-      <button className="px-[9px] py-[5px] rounded-[6px] bg-gray-850 text-white text-[14px] font-medium leading-[140%]">
+      <button
+        onClick={() =>
+          window.open(
+            "https://forms.google.com/d/e/YOUR_FORM_ID/viewform",
+            "_blank"
+          )
+        }
+        className="px-[9px] py-[5px] rounded-[6px] bg-gray-850 text-white text-[14px] font-medium leading-[140%]"
+      >
         Beta 신청
       </button>
     </header>
