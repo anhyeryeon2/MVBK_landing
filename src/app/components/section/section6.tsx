@@ -24,7 +24,7 @@ export default function Section6() {
           모든 과정을 실시간으로 전달 받아요.
         </FadeUp>
 
-        <FadeUp delay={0.6} y={50} className="mt-8 w-[280px] h-[280px]">
+        <FadeUp delay={0.6} y={50} className="mt-8 w-[375px] h-[278px]">
           <Lottie animationData={landing4} />
         </FadeUp>
       </div>

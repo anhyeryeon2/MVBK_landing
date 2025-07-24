@@ -25,7 +25,7 @@ export default function Section4() {
           무비부키가 대관 신청을 대신 진행해드려요.
         </FadeUp>
 
-        <FadeUp delay={0.6} y={50} className="mt-8 w-[280px] h-[280px]">
+      <FadeUp delay={0.6} y={50} className="mt-8 w-[375px] h-[278px]">
           <Lottie animationData={landing2} />
         </FadeUp>
       </div>
