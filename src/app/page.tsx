@@ -20,7 +20,7 @@ export default function ReactFullpageDemo() {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <div className="w-full max-w-[430px] mx-auto bg-gray-black text-white relative">
+    <div className="w-full max-w-[430px] mx-auto bg-gray-black text-white relative justify-center">
       <Header />
       <FullpageContainer
         activeIndex={activeIndex}
