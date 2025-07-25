@@ -21,7 +21,7 @@ export default function ReactFullpageDemo() {
 
   return (
     <div className="relative bg-gray-black text-white w-full h-screen overflow-hidden">
-      <div className="relative z-10 mx-auto w-full max-w-[430px]">
+      <div className="relative z-10 w-full max-w-[430px] left-1/2 -translate-x-1/2">
         <div className="absolute inset-0 z-0 bg-landing-bg bg-no-repeat bg-cover bg-bottom opacity-60" />
 
         <Header />
