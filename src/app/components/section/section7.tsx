@@ -27,12 +27,12 @@ export default function Section7() {
   };
 
   return (
-    <SectionWrapper className=" w-[430px] mx-auto bg-gray-black text-black relative">
-      <div className="h-screen flex flex-col items-center justify-center gap-[18px] px-6">
+    <SectionWrapper className="w-full max-w-[430px] mx-auto bg-gray-black text-black relative">
+      <div className="h-screen flex flex-col items-center justify-center gap-[18px] px-4">
         <PopUp delay={0.1}>
           <button
             onClick={() => window.open(EXTERNAL_LINKS.BETA_FORM, "_blank")}
-            className="flex items-center justify-center gap-1 bg-red-main body-3-semibold w-[250px] h-[52px] rounded-xl pl-6 py-3 text-white active:bg-red-700"
+            className="flex items-center justify-center gap-1 bg-red-main body-2-semibold w-[250px] h-[52px] rounded-xl pl-6 py-3 text-white active:bg-red-700"
           >
             Beta 신청하러 가기
             <ArrowRight className="w-5 h-5 pt-[3px]" />
@@ -42,7 +42,7 @@ export default function Section7() {
         <PopUp delay={0.3}>
           <button
             onClick={() => window.open(EXTERNAL_LINKS.INSTAGRAM, "_blank")}
-            className="flex items-center justify-center gap-1 bg-gray-900 body-3-semibold w-[250px] h-[52px] rounded-xl px-6 py-3 text-white active:bg-gray-950"
+            className="flex items-center justify-center gap-1 bg-gray-900 body-2-semibold w-[250px] h-[52px] rounded-xl px-6 py-3 text-white active:bg-gray-950"
           >
             <InstagramIcon className="w-6 h-6" />
             인스타그램 바로가기
@@ -52,7 +52,7 @@ export default function Section7() {
         <PopUp delay={0.5}>
           <button
             onClick={handleShare}
-            className="bg-gray-900 body-3-semibold w-[250px] h-[52px] rounded-xl px-6 py-3 text-white active:bg-gray-950"
+            className="bg-gray-900 body-2-semibold w-[250px] h-[52px] rounded-xl px-6 py-3 text-white active:bg-gray-950"
           >
             링크 공유하기
           </button>

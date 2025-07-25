@@ -56,7 +56,7 @@ export default function ReactFullpageDemo() {
             </div>
           </FullpageSection>
           <FullpageSection name="seventh">
-            <div className="bg-gray-black">
+            <div className="w-full h-screen bg-black">
               <Section7 />
             </div>
           </FullpageSection>
