@@ -6,9 +6,14 @@ import { EXTERNAL_LINKS } from "@/constants/links";
 export default function Section2() {
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center text-center text-white px-6 relative">
-      {/* 삭제: 배경 레이어 */}
-      {/* <div className="absolute inset-0 bg-landing-bg ... /> */}
-
+      <motion.div
+        className="absolute inset-0 bg-black pointer-events-none"
+        style={{ zIndex: 0 }}
+        initial={{ opacity: 0.3 }}
+        whileInView={{ opacity: 0.5 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: false, amount: 0.5 }}
+      />
       <motion.div
         className="flex-1 flex flex-col justify-center items-center px-6 text-center text-white relative"
         style={{ zIndex: 1 }}

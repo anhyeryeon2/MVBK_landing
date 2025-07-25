@@ -6,7 +6,7 @@ import FadeUp from "../FadeUp";
 
 export default function Section4() {
   return (
-    <div className="w-full max-w-[430px] h-screen mx-auto bg-gray-black flex flex-col">
+    <div className="w-[430px] h-screen  bg-gray-black flex flex-col ">
       <div className="flex-1 flex flex-col justify-start items-center px-6 text-center text-white pt-[109px]">
         <FadeUp
           delay={0.2}
@@ -25,7 +25,7 @@ export default function Section4() {
           무비부키가 대관 신청을 대신 진행해드려요.
         </FadeUp>
 
-      <FadeUp delay={0.6} y={50} className="mt-8 w-[375px] h-[278px]">
+        <FadeUp delay={0.6} y={50} className="mt-8 w-[375px] h-[278px]">
           <Lottie animationData={landing2} />
         </FadeUp>
       </div>

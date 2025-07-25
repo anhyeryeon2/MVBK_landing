@@ -17,7 +17,12 @@ export default function Section1() {
 
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center text-center text-white px-6 relative">
-      <div className="absolute top-0 left-0 w-full h-20 z-10 pointer-events-none bg-gradient-to-b from-gray-black to-transparent" />
+      <motion.div
+        className="absolute inset-0 bg-black pointer-events-none"
+        style={{ zIndex: 0 }}
+        initial={{ opacity: 0.3 }}
+        animate={{ opacity: 0.3 }}
+      />
       <motion.img
         src="/moviebookie.png"
         alt="mvbk logo"

@@ -21,8 +21,9 @@ export default function ReactFullpageDemo() {
 
   return (
     <div className="relative bg-gray-black text-white w-full h-screen overflow-hidden">
-      <div className="fixed inset-0 z-0 bg-landing-bg bg-no-repeat bg-cover bg-bottom opacity-60" />
-      <div className="relative z-10 left-1/2 -translate-x-1/2 w-full max-w-[430px]">
+      <div className="relative z-10 mx-auto w-full max-w-[430px]">
+        <div className="absolute inset-0 z-0 bg-landing-bg bg-no-repeat bg-cover bg-bottom opacity-60" />
+
         <Header />
         <FullpageContainer
           activeIndex={activeIndex}
