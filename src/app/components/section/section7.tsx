@@ -28,7 +28,7 @@ export default function Section7() {
 
   return (
     <SectionWrapper className="w-full max-w-[430px] mx-auto bg-gray-black text-black relative">
-      <div className="h-screen flex flex-col items-center justify-center gap-[18px] px-4">
+      <div className="h-screen flex flex-col items-center justify-center gap-[18px] px-4 pb-16">
         <PopUp delay={0.1}>
           <button
             onClick={() => window.open(EXTERNAL_LINKS.BETA_FORM, "_blank")}

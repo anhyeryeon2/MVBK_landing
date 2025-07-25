@@ -11,7 +11,7 @@ export default function Section4() {
       <div className="h-screen flex flex-col items-center justify-center gap-[18px] px-4">
         <FadeUp
           delay={0.2}
-          className="title-1-bold text-[24px] leading-relaxed text-white/90 text-center"
+          className="pt-4 title-1-bold text-[24px] leading-relaxed text-white/90 text-center"
         >
           복잡한 대관 절차는
           <br />
