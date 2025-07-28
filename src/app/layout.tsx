@@ -1,3 +1,4 @@
+import GoogleAnalytics from "@/lib/GoogleAnalytics";
 import { pretendard } from "../app/fonts/pretendard";
 import InAppRedirect from "./components/InAppRedirect";
 import "./globals.css";
@@ -38,7 +39,9 @@ export default function RootLayout({
         />
       </head>
       <body>
-        {" "}
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+        ) : null}
         <InAppRedirect />
         {children}
       </body>
