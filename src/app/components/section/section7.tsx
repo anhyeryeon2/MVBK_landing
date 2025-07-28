@@ -15,7 +15,7 @@ export default function Section7() {
     if (navigator.share) {
       try {
         await navigator.share({
-          text: " https://movie-bookie.shop",
+          text: "https://mvbk-landing.vercel.app/",
         });
         console.log("공유 완료");
       } catch (error) {
